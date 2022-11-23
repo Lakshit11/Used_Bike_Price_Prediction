@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Home Page</title>
+</head>
+<body style="background-image: url('https://thumbs.dreamstime.com/b/motorcycle-collage-16477775.jpg');">
+    <center>
+        <br>
+        <br>
+        <div style="border: thick black solid ; width: fit-content; background-color: #ebe4be; ">
+            <br>
+            <br>
+            <h1>
+                <b><i>Used Bike Price Prediction</i></b>
+            </h1>
+            <form action = "{{ url_for('predict') }}" method="POST" class="text-center border border-light p-5" >
+                <div class="form-group" style="padding:10px;">
+                    <input style="padding:5px" height:45px name = "bike" type="text" class="form-control mb-4" placeholder="Bike Name(Brand, Model, Displacement)" required><br>
+                    <input style="padding:5px" name = "KM" type="number" class="form-control mb-4" placeholder="KM Driven" required><br>
+                    <input style="padding:5px" name = "Age" type="number" class="form-control mb-4" placeholder="Age of Bike" required><br>
+                    <b>Select Owner Type:</b>&nbsp&nbsp&nbsp&nbsp
+                    <select name = "Owner" required>
+                        <option value = 0>First Owner</option>
+                        <option value = 1>Second Owner</option>
+                        <option value = 2>Third Owner</option>
+                        <option value = 3>Fourth Owner or More</option>
+                    </select><br><br><br>
+                    <button type="submit" class="btn btn-block btn-warning">Submit</button>
+                    <h6><b><u>Note:</u></b><br>Please Enter Bike Name in format of brand, model, displacement</u> </h6> 
+                </div>
+            </form>
+        </div>
+    </center>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
